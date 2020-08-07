@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Note to File" FOLDED="false" ID="ID_889872586" CREATED="1595532534890" MODIFIED="1596733410857" STYLE="oval">
+<node TEXT="Note to File" FOLDED="false" ID="ID_889872586" CREATED="1595532534890" MODIFIED="1596835528478" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
     <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
@@ -65,7 +65,270 @@
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="24" RULE="ON_BRANCH_CREATION"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
-<node TEXT="install" POSITION="right" ID="ID_1460052182" CREATED="1595540236094" MODIFIED="1596733396996">
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1>
+      Freeplane note to file
+    </h1>
+    <p>
+      groovy scripts to use node's notes as textfiles
+    </p>
+    <p>
+      The NoteToFile.mm (Freeplane map) has a better and detailed explanation about this scripts and how they work.
+    </p>
+    <h2>
+      NoteToFile.groovy
+    </h2>
+    <p>
+      
+    </p>
+    <h3>
+      Description
+    </h3>
+    <p>
+      Saves the note's text from the selected node to a file (it doesn't open another application (for exmple Notepad++))
+    </p>
+    <h3>
+      it works this way
+    </h3>
+    <p>
+      
+    </p>
+    <pre><code>    if node has a note --&gt;
+      if node has a link to a existing file --&gt;
+        save note to file
+    else
+      if node has a defined extension
+        save note to temp file</code></pre>
+    <h2>
+      FileToNode.groovy
+    </h2>
+    <p>
+      
+    </p>
+    <h3>
+      Description
+    </h3>
+    <p>
+      imports a file as text into the selected node's note
+    </p>
+    <p>
+      (it doesn't open another application (or Notepad++))
+    </p>
+    <h3>
+      it works this way
+    </h3>
+    <p>
+      
+    </p>
+    <pre><code>    if node has a link to an existing file
+      if extension from file is an &quot;accepted file   extension&quot;
+        --&gt; copies file text into note
+    else
+      if node has a defined extension
+        --&gt; copies text from temp file with same extension into note</code></pre>
+    <h2>
+      OpenWithNotepad++.groovy
+    </h2>
+    <p>
+      
+    </p>
+    <h3>
+      Description
+    </h3>
+    <p>
+      Script for Freeplane to open files or node's notes as files in Notepad++
+    </p>
+    <h3>
+      it works this way
+    </h3>
+    <p>
+      
+    </p>
+    <pre><code>    if node
+      has a link to a file --&gt;
+        it opens the file in N++
+      has a note --&gt;
+        saves it as a textfile and opens it in N++
+        if it's a groovy script
+          it saves it in the user's scripts folder
+        if not
+          it saves it in a default folder
+      has no link nor note --&gt;
+        takes text from last groovy script tempFile and brings it as a note</code></pre>
+    <h2>
+      LastLoggedError.groovy
+    </h2>
+    <p>
+      it shows the last lines from the log.0 file where Freeplane logs errors and other events
+    </p>
+    <h2>
+      more information
+    </h2>
+    <p>
+      more information in the OpenWithNotepad++.mm Freeplane file
+    </p>
+    <p>
+      and video (without audio. sorry) here: https://youtu.be/GTYWBa4EUFk
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="definitions" POSITION="right" ID="ID_162059596" CREATED="1596812359139" MODIFIED="1596835922086">
+<edge COLOR="#007c7c"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      I use some terms in this map to explain the scripts installation and functions
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      here I try to define this terms better to avoid confussions
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      used in this map for explain
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="text file" FOLDED="true" ID="ID_180563109" CREATED="1596812371149" MODIFIED="1596835674255"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>a file that has text in it </b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <b>it doesn't need to be a txt file </b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <b>for example, .sql, .groovy, .java, .config ,.xml files are also for this definition text files </b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <b>an easy test is if the file can be opened in the notepad aplication or another text editor (and its human readable) </b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <b>I defined some extensions as text files in the NTF library </b>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="a file that has text in it" ID="ID_1116377176" CREATED="1596812539015" MODIFIED="1596812556064"/>
+<node TEXT="it doesn&apos;t need to be a txt file" ID="ID_22663723" CREATED="1596812559702" MODIFIED="1596812637906"><richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      like 'exampleFile.txt'
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="for example, .sql, .groovy, .java, .config ,.xml files are also for this definition text files" ID="ID_1089483885" CREATED="1596812638631" MODIFIED="1596812778753"/>
+<node TEXT="an easy test is if the file can be opened in the notepad aplication or another text editor (and its human readable)" ID="ID_1133778450" CREATED="1596812684760" MODIFIED="1596812746232"/>
+<node TEXT="I defined some extensions as text files in the NTF library" ID="ID_323928511" CREATED="1596812795842" MODIFIED="1596812855664">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#990000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1565157321" STARTINCLINATION="601;0;" ENDINCLINATION="601;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+</node>
+<node TEXT="temp file" FOLDED="true" ID="ID_929572360" CREATED="1596812862444" MODIFIED="1596835870076"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      when the node has no link to a file, the note's text is readed or written to a temporary file
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      it creates a new temp file for every diferent extension type (if needed)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      but for any extension type it creates only one temporary file
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="when the node has no link to a file, the note&apos;s text is readed or written to a temporary file" ID="ID_1184155790" CREATED="1596812872946" MODIFIED="1596835700808"/>
+<node TEXT="this file is in a folder defined by the user" ID="ID_634390692" CREATED="1596812937186" MODIFIED="1596812951810">
+<node TEXT="defined in the NTF.groovy file" ID="ID_1431269469" CREATED="1596812953104" MODIFIED="1596812972327"/>
+</node>
+<node TEXT="it creates a new temp file for every diferent extension type (if needed)" ID="ID_1507486453" CREATED="1596812976049" MODIFIED="1596813039528"/>
+<node ID="ID_579388554" CREATED="1596813041529" MODIFIED="1596835756118"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      but for any extension type it creates only <u>one</u>&nbsp;temporary file
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="when another note with the same extension has to be saved, it saves it on the same temp file, overwriting its previous content." ID="ID_1963987717" CREATED="1596813083783" MODIFIED="1596835824388">
+<node TEXT="this way the folder doesn&apos;t get full with useless tempfiles" ID="ID_1595286276" CREATED="1596813280450" MODIFIED="1596813395541"/>
+<node TEXT="the information stays in the node&apos;s notes and can be updated there" ID="ID_450021229" CREATED="1596813402472" MODIFIED="1596813433292"/>
+<node TEXT="you don&apos;t need to look after the new temp files in other application if you export another node&apos;s note" ID="ID_366191838" CREATED="1596813440027" MODIFIED="1596813551489"/>
+</node>
+</node>
+</node>
+<node TEXT="install" FOLDED="true" POSITION="right" ID="ID_1460052182" CREATED="1595540236094" MODIFIED="1596733396996">
 <edge COLOR="#007c7c"/>
 <node TEXT="Install the NTF.groovy file as a library in Freeplane" FOLDED="true" ID="ID_681416454" CREATED="1596728756188" MODIFIED="1596734414230" NUMBERED="true"><richcontent TYPE="DETAILS">
 
@@ -498,9 +761,9 @@
 </node>
 </node>
 </node>
-<node TEXT="definitions" POSITION="right" ID="ID_162059596" CREATED="1596812359139" MODIFIED="1596812534237">
+<node TEXT="Scripts" FOLDED="true" POSITION="right" ID="ID_1476340580" CREATED="1596733456792" MODIFIED="1596835563374">
 <edge COLOR="#007c7c"/>
-<richcontent TYPE="NOTE">
+<richcontent TYPE="DETAILS">
 
 <html>
   <head>
@@ -508,56 +771,13 @@
   </head>
   <body>
     <p>
-      I use some terms in this map to explain the scripts installation and functions
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      here I try to define this terms better to avoid confussions
+      descriptions and examples
     </p>
   </body>
 </html>
-</richcontent>
-<node TEXT="text file" FOLDED="true" ID="ID_180563109" CREATED="1596812371149" MODIFIED="1596812377576">
-<node TEXT="a file that has text in it" ID="ID_1116377176" CREATED="1596812539015" MODIFIED="1596812556064"/>
-<node TEXT="it doesn&apos;t need to be a txt file" ID="ID_22663723" CREATED="1596812559702" MODIFIED="1596812637906"><richcontent TYPE="DETAILS">
 
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      like 'exampleFile.txt'
-    </p>
-  </body>
-</html>
 </richcontent>
-</node>
-<node TEXT="for example, .sql, .groovy, .java, .config ,.xml files are also for this definition text files" ID="ID_1089483885" CREATED="1596812638631" MODIFIED="1596812778753"/>
-<node TEXT="an easy test is if the file can be opened in the notepad aplication or another text editor (and its human readable)" ID="ID_1133778450" CREATED="1596812684760" MODIFIED="1596812746232"/>
-<node TEXT="I defined some extensions as text files in the NTF library" ID="ID_323928511" CREATED="1596812795842" MODIFIED="1596812855664">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#990000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1565157321" STARTINCLINATION="601;0;" ENDINCLINATION="601;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-</node>
-</node>
-<node TEXT="temp file" FOLDED="true" ID="ID_929572360" CREATED="1596812862444" MODIFIED="1596812868498">
-<node TEXT="when the node has no link to a file, the note&apos;stext is readed or written to a temporary file" ID="ID_1184155790" CREATED="1596812872946" MODIFIED="1596812935610"/>
-<node TEXT="this file is in a folder defined by the user" FOLDED="true" ID="ID_634390692" CREATED="1596812937186" MODIFIED="1596812951810">
-<node TEXT="defined in the NTF.groovy file" ID="ID_1431269469" CREATED="1596812953104" MODIFIED="1596812972327"/>
-</node>
-<node TEXT="it creates a new temp file for every diferent extension type (if needed)" ID="ID_1507486453" CREATED="1596812976049" MODIFIED="1596813039528"/>
-<node TEXT="but for any extension type it creates only one temporary file" ID="ID_579388554" CREATED="1596813041529" MODIFIED="1596813082138"/>
-<node TEXT="when another note with the same extension has to be saved temporary as a file, it saves it in the same temp file, overwriting its previous content." ID="ID_1963987717" CREATED="1596813083783" MODIFIED="1596813303022">
-<node TEXT="this way the folder doesn&apos;t get full with useless tempfiles" ID="ID_1595286276" CREATED="1596813280450" MODIFIED="1596813395541"/>
-<node TEXT="the information stays in the node&apos;s notes and can be updated there" ID="ID_450021229" CREATED="1596813402472" MODIFIED="1596813433292"/>
-<node TEXT="you don&apos;t need to look after the new temp files in other application if you export another node&apos;s note" ID="ID_366191838" CREATED="1596813440027" MODIFIED="1596813551489"/>
-</node>
-</node>
-</node>
-<node TEXT="Scripts" POSITION="right" ID="ID_1476340580" CREATED="1596733456792" MODIFIED="1596733466904">
-<edge COLOR="#007c7c"/>
-<node TEXT="NTF.groovy" FOLDED="true" ID="ID_987415585" CREATED="1596485893053" MODIFIED="1596736923951"><richcontent TYPE="DETAILS">
+<node TEXT="NTF.groovy" ID="ID_987415585" CREATED="1596485893053" MODIFIED="1596736923951"><richcontent TYPE="DETAILS">
 
 <html>
   <head>
@@ -587,11 +807,11 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#990000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_655711305" STARTINCLINATION="208;0;" ENDINCLINATION="208;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
-<node TEXT="NoteToFile.groovy" FOLDED="true" ID="ID_1419635768" CREATED="1596481280430" MODIFIED="1596733485863">
+<node TEXT="NoteToFile.groovy" ID="ID_1419635768" CREATED="1596481280430" MODIFIED="1596733485863">
 <node TEXT="description" FOLDED="true" ID="ID_1395278738" CREATED="1596810795681" MODIFIED="1596810800604">
 <node TEXT="saves the note&apos;s text from the selected node to a file" ID="ID_1821845247" CREATED="1596810849029" MODIFIED="1596811968275"/>
 <node TEXT="it doesn&apos;t open another application (or Notepad++)" ID="ID_703934626" CREATED="1596811985261" MODIFIED="1596812026394"/>
-<node TEXT="general idea:" ID="ID_1375511796" CREATED="1596810888046" MODIFIED="1596811341540"><richcontent TYPE="DETAILS">
+<node TEXT="general idea:" FOLDED="true" ID="ID_1375511796" CREATED="1596810888046" MODIFIED="1596811341540"><richcontent TYPE="DETAILS">
 
 <html>
   <head>
@@ -651,7 +871,7 @@
 </node>
 </node>
 </node>
-<node TEXT="more detailed:" FOLDED="true" ID="ID_346684695" CREATED="1596810888046" MODIFIED="1596811378846"><richcontent TYPE="DETAILS">
+<node TEXT="more detailed:" FOLDED="true" ID="ID_346684695" CREATED="1596810888046" MODIFIED="1596834641498"><richcontent TYPE="DETAILS">
 
 <html>
   <head>
@@ -663,6 +883,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="if node has a note --&gt;" ID="ID_291066767" CREATED="1596810896583" MODIFIED="1596810995077">
 <node TEXT="if node has a link to a existing file --&gt;" ID="ID_1546087462" CREATED="1596810925478" MODIFIED="1596811293793"><richcontent TYPE="DETAILS">
@@ -720,7 +941,7 @@
 <node TEXT="and at the lib NTF.groovy file" ID="ID_924577212" CREATED="1596811907797" MODIFIED="1596811929803"/>
 </node>
 </node>
-<node TEXT="use cases" ID="ID_186256293" CREATED="1596812291151" MODIFIED="1596812295550">
+<node TEXT="use cases" FOLDED="true" ID="ID_186256293" CREATED="1596812291151" MODIFIED="1596812295550">
 <node TEXT="definitions" FOLDED="true" ID="ID_510390288" CREATED="1596815916312" MODIFIED="1596815920754">
 <node TEXT="look in definition what I mean with &apos;text file&apos;" ID="ID_607601539" CREATED="1596815785404" MODIFIED="1596815826498">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#990000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_180563109" STARTINCLINATION="605;0;" ENDINCLINATION="605;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
@@ -1368,10 +1589,101 @@
 </node>
 </node>
 </node>
-<node TEXT="FileToNote.groovy" FOLDED="true" ID="ID_623846943" CREATED="1596481280418" MODIFIED="1596733485844">
+<node TEXT="FileToNote.groovy" ID="ID_623846943" CREATED="1596481280418" MODIFIED="1596733485844">
 <node TEXT="just like NoteToFile but the other way" ID="ID_889121028" CREATED="1596832725691" MODIFIED="1596832750589"/>
+<node TEXT="description" FOLDED="true" ID="ID_866188859" CREATED="1596810795681" MODIFIED="1596810800604">
+<node TEXT="imports a file as text into the selected node&apos;s note" ID="ID_1479278211" CREATED="1596810849029" MODIFIED="1596834338000"/>
+<node TEXT="it doesn&apos;t open another application (or Notepad++)" ID="ID_20090125" CREATED="1596811985261" MODIFIED="1596812026394"/>
+<node TEXT="general idea:" FOLDED="true" ID="ID_143391280" CREATED="1596810888046" MODIFIED="1596811341540"><richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      simplified for clarity
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="if node has a link to an existing file" ID="ID_291424782" CREATED="1596834360369" MODIFIED="1596834383839">
+<node TEXT="if extension from file is an &quot;accepted file extension&quot;" ID="ID_1355376679" CREATED="1596834399067" MODIFIED="1596834604473">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#990000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1565157321" STARTINCLINATION="759;0;" ENDINCLINATION="759;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      and user confirms
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="copies file text into note" ID="ID_1610787778" CREATED="1596834476073" MODIFIED="1596834498680"/>
 </node>
-<node TEXT="OpenWithNotepad++" FOLDED="true" ID="ID_819638833" CREATED="1596727985072" MODIFIED="1596733470022">
+</node>
+<node TEXT="else" ID="ID_1097171146" CREATED="1596834384778" MODIFIED="1596834387468">
+<node TEXT="if node has a defined extension" ID="ID_1291858666" CREATED="1596834514219" MODIFIED="1596834620666"><richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      and user confirms
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="copies text from temp file with same extension into note" ID="ID_1305404405" CREATED="1596834545836" MODIFIED="1596834577433"/>
+</node>
+</node>
+</node>
+<node TEXT="more detailed" FOLDED="true" ID="ID_857289733" CREATED="1596834627992" MODIFIED="1596834644387"><richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      this is really what it does
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="if node has a link to an existing file" ID="ID_413750479" CREATED="1596834360369" MODIFIED="1596834383839">
+<node TEXT="if extension from file is an &quot;accepted file extension&quot;" ID="ID_422859122" CREATED="1596834399067" MODIFIED="1596834698311">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#990000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1565157321" STARTINCLINATION="759;0;" ENDINCLINATION="759;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<node TEXT="if note is empty or user confirms overwriting it" ID="ID_643618890" CREATED="1596834670156" MODIFIED="1596834691833">
+<node TEXT="copies file text into note" ID="ID_1851137482" CREATED="1596834476073" MODIFIED="1596834498680"/>
+<node TEXT="set extension in node" ID="ID_1434473938" CREATED="1596834806098" MODIFIED="1596834814569"/>
+</node>
+</node>
+</node>
+<node TEXT="else" ID="ID_59998678" CREATED="1596834384778" MODIFIED="1596834387468">
+<node TEXT="if node has a defined extension" ID="ID_442521459" CREATED="1596834514219" MODIFIED="1596834717942">
+<node TEXT="if note is empty or user confirms overwriting it" ID="ID_1352216" CREATED="1596834670156" MODIFIED="1596834691833">
+<node TEXT="if it is a groovy file, it drops the first text line (executionmode)" ID="ID_519714599" CREATED="1596834760371" MODIFIED="1596834788592"/>
+<node TEXT="copies text from temp file with same extension into note" ID="ID_853054553" CREATED="1596834545836" MODIFIED="1596834577433"/>
+<node TEXT="set extension in node" ID="ID_1279218785" CREATED="1596834806098" MODIFIED="1596834814569"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="more more more detailed" FOLDED="true" ID="ID_1199364540" CREATED="1595541664992" MODIFIED="1595541673292">
+<node TEXT="look at the groovy file" ID="ID_654744777" CREATED="1595541673301" MODIFIED="1595541688941"/>
+<node TEXT="and at the lib NTF.groovy file" ID="ID_1130969473" CREATED="1596811907797" MODIFIED="1596811929803"/>
+</node>
+</node>
+</node>
+<node TEXT="OpenWithNotepad++" ID="ID_819638833" CREATED="1596727985072" MODIFIED="1596733470022">
 <node TEXT="description" FOLDED="true" ID="ID_496019362" CREATED="1595538933740" MODIFIED="1596733396991">
 <node TEXT="Script to open files or node&apos;s notes as files in Notepad++" ID="ID_672112149" CREATED="1595538948717" MODIFIED="1595539006095"/>
 <node TEXT="general idea:" ID="ID_1158237344" CREATED="1595540970979" MODIFIED="1596811337110"><richcontent TYPE="DETAILS">
@@ -2257,7 +2569,9 @@
 </node>
 </node>
 </node>
-<node TEXT="LastLoggedError.groovy" ID="ID_1754657241" CREATED="1596552723379" MODIFIED="1596733485888"/>
+<node TEXT="LastLoggedError.groovy" ID="ID_1754657241" CREATED="1596552723379" MODIFIED="1596733485888">
+<node TEXT="it shows the last lines from the log.0 file where Freeplane logs errors and other events" ID="ID_47952164" CREATED="1596835112782" MODIFIED="1596835154632"/>
+</node>
 <node TEXT="myTempFile.groovy" ID="ID_621153400" CREATED="1596734132578" MODIFIED="1596807817802"><richcontent TYPE="DETAILS">
 
 <html>
@@ -2379,8 +2693,22 @@
 </node>
 </node>
 </node>
-<node TEXT="Example: MarkdownTo HTML" FOLDED="true" POSITION="right" ID="ID_1555513226" CREATED="1596728612206" MODIFIED="1596733397012">
+<node TEXT="Example: MarkdownTo HTML" FOLDED="true" POSITION="right" ID="ID_1555513226" CREATED="1596728612206" MODIFIED="1596835582589">
 <edge COLOR="#007c00"/>
+<richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      an other example
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="description" ID="ID_22331393" CREATED="1596729639756" MODIFIED="1596731460619"><richcontent TYPE="NOTE">
 
 <html>
@@ -2511,7 +2839,7 @@
 <node TEXT="this way it can &quot;see it&quot;" ID="ID_277980240" CREATED="1596729432332" MODIFIED="1596729455104"/>
 </node>
 </node>
-<node TEXT="save the script as groovy temp file" FOLDED="true" ID="ID_1859994285" CREATED="1596729844889" MODIFIED="1596729890953">
+<node TEXT="save the script as groovy temp file" ID="ID_1859994285" CREATED="1596729844889" MODIFIED="1596729890953">
 <node TEXT="This node has the script as text in it&apos;s note --&gt;" ID="ID_1136733817" CREATED="1596729900833" MODIFIED="1596729936369">
 <node TEXT="markdown2Html" ID="ID_73276339" CREATED="1596728636125" MODIFIED="1596728720454"><richcontent TYPE="DETAILS">
 
@@ -3025,7 +3353,7 @@
 <node TEXT="you could take a script that was written in a node&apos;s note and run it as a tempfile." ID="ID_1033947210" CREATED="1596731778657" MODIFIED="1596731945110"/>
 </node>
 </node>
-<node TEXT="README.md" POSITION="left" ID="ID_1232301190" CREATED="1596573908818" MODIFIED="1596733397011" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_note_to_file/README.md"><richcontent TYPE="NOTE">
+<node TEXT="README.md" FOLDED="true" POSITION="left" ID="ID_1232301190" CREATED="1596573908818" MODIFIED="1596835464228" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_note_to_file/README.md"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -3040,6 +3368,108 @@
     </p>
     <p>
       groovy scripts to use node's notes as textfiles
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The NoteToFile.mm (Freeplane map) has a better and detailed explanation about this scripts and how they work.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## NoteToFile.groovy
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### Description
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Saves the note's text from the selected node to a file (it doesn't open another application (for exmple Notepad++))
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### it works this way
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if node has a note --&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if node has a link to a existing file --&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;save note to file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;else
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if node has a defined extension
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;save note to temp file
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## FileToNode.groovy
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### Description
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      imports a file as text into the selected node's note
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      (it doesn't open another application (or Notepad++))
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### it works this way
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if node has a link to an existing file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if extension from file is an &quot;accepted file&nbsp;&nbsp;&nbsp;extension&quot;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt; copies file text into note
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;else
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if node has a defined extension
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt; copies text from temp file with same extension into note
     </p>
     <p>
       
@@ -3069,55 +3499,49 @@
       
     </p>
     <p>
-      * if node
+      &nbsp;&nbsp;&nbsp;&nbsp;if node
     </p>
     <p>
-      &nbsp;&nbsp;* has a link to a file --&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a link to a file --&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;* it opens the file in N++
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it opens the file in N++
     </p>
     <p>
-      &nbsp;&nbsp;* has a note --&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a note --&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;* saves it as a textfile and opens it in N++
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saves it as a textfile and opens it in N++
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;* if it's a groovy script
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if it's a groovy script
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* it saves it in the user's scripts folder
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it saves it in the user's scripts folder
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;* if not
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* it saves it in a default folder
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it saves it in a default folder
     </p>
     <p>
-      &nbsp;&nbsp;* has no link nor note --&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has no link nor note --&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;* takes text from last groovy script tempFile and brings it as a note
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ## NoteToFile.groovy
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ## FileToNode.groovy
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;takes text from last groovy script tempFile and brings it as a note
     </p>
     <p>
       
     </p>
     <p>
       ## LastLoggedError.groovy
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      it shows the last lines from the log.0 file where Freeplane logs errors and other events
     </p>
     <p>
       
@@ -3139,9 +3563,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <edge COLOR="#007c00"/>
-<node TEXT="formated" ID="ID_297102833" CREATED="1596728568871" MODIFIED="1596733397011"><richcontent TYPE="NOTE">
+<node TEXT="formated" ID="ID_654376663" CREATED="1596835464199" MODIFIED="1596835464213"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -3154,6 +3579,60 @@
     <p>
       groovy scripts to use node's notes as textfiles
     </p>
+    <p>
+      The NoteToFile.mm (Freeplane map) has a better and detailed explanation about this scripts and how they work.
+    </p>
+    <h2>
+      NoteToFile.groovy
+    </h2>
+    <p>
+      
+    </p>
+    <h3>
+      Description
+    </h3>
+    <p>
+      Saves the note's text from the selected node to a file (it doesn't open another application (for exmple Notepad++))
+    </p>
+    <h3>
+      it works this way
+    </h3>
+    <p>
+      
+    </p>
+    <pre><code>    if node has a note --&gt;
+      if node has a link to a existing file --&gt;
+        save note to file
+    else
+      if node has a defined extension
+        save note to temp file</code></pre>
+    <h2>
+      FileToNode.groovy
+    </h2>
+    <p>
+      
+    </p>
+    <h3>
+      Description
+    </h3>
+    <p>
+      imports a file as text into the selected node's note
+    </p>
+    <p>
+      (it doesn't open another application (or Notepad++))
+    </p>
+    <h3>
+      it works this way
+    </h3>
+    <p>
+      
+    </p>
+    <pre><code>    if node has a link to an existing file
+      if extension from file is an &quot;accepted file   extension&quot;
+        --&gt; copies file text into note
+    else
+      if node has a defined extension
+        --&gt; copies text from temp file with same extension into note</code></pre>
     <h2>
       OpenWithNotepad++.groovy
     </h2>
@@ -3172,76 +3651,22 @@
     <p>
       
     </p>
-    <ul>
-      <li>
-        if node
-
-        <ul>
-          <li>
-            has a link to a file --&gt;
-
-            <ul>
-              <li>
-                it opens the file in N++
-              </li>
-            </ul>
-          </li>
-          <li>
-            has a note --&gt;
-
-            <ul>
-              <li>
-                saves it as a textfile and opens it in N++
-              </li>
-              <li>
-                if it's a groovy script
-
-                <ul>
-                  <li>
-                    it saves it in the user's scripts folder
-                  </li>
-                </ul>
-              </li>
-              <li>
-                if not
-
-                <ul>
-                  <li>
-                    it saves it in a default folder
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            has no link nor note --&gt;
-
-            <ul>
-              <li>
-                takes text from last groovy script tempFile and brings it as a note
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <h2>
-      NoteToFile.groovy
-    </h2>
-    <p>
-      
-    </p>
-    <h2>
-      FileToNode.groovy
-    </h2>
-    <p>
-      
-    </p>
+    <pre><code>    if node
+      has a link to a file --&gt;
+        it opens the file in N++
+      has a note --&gt;
+        saves it as a textfile and opens it in N++
+        if it's a groovy script
+          it saves it in the user's scripts folder
+        if not
+          it saves it in a default folder
+      has no link nor note --&gt;
+        takes text from last groovy script tempFile and brings it as a note</code></pre>
     <h2>
       LastLoggedError.groovy
     </h2>
     <p>
-      
+      it shows the last lines from the log.0 file where Freeplane logs errors and other events
     </p>
     <h2>
       more information
@@ -3254,6 +3679,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <richcontent TYPE="DETAILS">
 
@@ -3267,6 +3693,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
 </node>
