@@ -1,7 +1,7 @@
 import org.freeplane.plugin.script.proxy.ScriptUtils
 
 class NTF{
-    static final String attributeForExtensions = 'OWN_ext'
+    static final String attributeForExtensions = 'file_ext'
     static final String addressNpp = 'C:\\Program Files\\Notepad++\\notepad++.exe'; // there is Notepad++ executable instaled
     static final String[] acceptedFileExtensions = ['groovy', 'sql', 'txt', 'ini', 'cfg', 'md'] // list of file extension I decided that can be opened with Notepad ++ (it is only to avoid opening pdf or excel files in N++ accidentally)
     static final String executionMode = '// @ExecutionModes({ON_SINGLE_NODE="/main_menu/ScriptsEdo/NoteToFile"})\n\n'
