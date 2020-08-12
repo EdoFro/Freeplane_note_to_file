@@ -11,7 +11,7 @@ def log0Path = c.userDirectory.path + '\\logs\\log.0'
 def logFile = new File(log0Path)
 
 def lastLines
-if(logFile.exists()){ lastLines = readLastLines(logFile, 6, 30,'\tat ') }
+if(logFile.exists()){ lastLines = readLastLines(logFile, 6, 500,'\tat ') }
 
 def nodo = node.createChild('last lines from log.0 file')
 nodo.noteText = lastLines.reverse().join('\n\n')
