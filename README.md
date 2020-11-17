@@ -13,7 +13,7 @@ This script opens the wikdShell groovy console adding this functionalities:
 - if when calling the script, the selected node has:
   - a link to a groovy file
   - a 'script1' attribute
-  - or a groovy script in its note (and its marked as a groovy node)
+  - or a groovy script in its note (and it is marked as a groovy node)
   
   the groovy console opens with that script in its editing pane
 
