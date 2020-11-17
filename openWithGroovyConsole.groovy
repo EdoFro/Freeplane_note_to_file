@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 import java.awt.event.KeyEvent
 
-fullScreen = true
+fullScreen = false
 
 // order of priority
     // groovy file   >  script1  >  ".groovy" note  >  empty 

@@ -4,6 +4,8 @@ groovy scripts to use node's notes as textfiles
 
 The NoteToFile.mm (Freeplane map) has a better and detailed explanation about this scripts and how they work.
 
+---
+
 ## NEW: openWithGroovyConsole.groovy
 
 **Note**: for this script to work, yo need the **wikdShell Addon v0.3.2** and a **Freeplane** version equal or newer than **v1.8.10-pre06**
@@ -21,6 +23,10 @@ This script opens the wikdShell groovy console adding this functionalities:
   - the node's note
   - or the node's 'script1' attribute
 
+![scriptInNote](scriptInNote.gif)
+
+---
+
 ## NoteToFile.groovy
 
 ### Description
@@ -35,6 +41,8 @@ Saves the note's text from the selected node to a file (it doesn't open another 
     else
       if node has a defined extension
         save note to temp file
+
+---
 
 ## FileToNode.groovy
 
@@ -52,6 +60,8 @@ imports a file as text into the selected node's note
     else
       if node has a defined extension
         --> copies text from temp file with same extension into note
+
+---
 
 ## OpenWithNotepad++.groovy
 
@@ -73,9 +83,13 @@ Script for Freeplane to open files or node's notes as files in Notepad++
       has no link nor note -->
         takes text from last groovy script tempFile and brings it as a note
 
+---
+
 ## LastLoggedError.groovy
 
 it shows the last lines from the log.0 file where Freeplane logs errors and other events
+
+---
 
 ## more information
 
