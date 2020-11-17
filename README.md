@@ -4,6 +4,23 @@ groovy scripts to use node's notes as textfiles
 
 The NoteToFile.mm (Freeplane map) has a better and detailed explanation about this scripts and how they work.
 
+## NEW: openWithGroovyConsole.groovy
+
+**Note**: for this script to work, yo need the **wikdShell Addon v0.3.2** and a **Freeplane** version equal or newer than **v1.8.10-pre06**
+
+This script opens the wikdShell groovy console adding this functionalities:
+
+- if when calling the script, the selected node has:
+  - a link to a groovy file
+  - a 'script1' attribute
+  - or a groovy script in its note (and its marked as a groovy node)
+  
+  the groovy console opens with that script in its editing pane
+
+- it adds two buttons to the groovy console to directly export the edited script to
+  - the node's note
+  - or the node's 'script1' attribute
+
 ## NoteToFile.groovy
 
 ### Description
