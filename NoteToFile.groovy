@@ -10,7 +10,8 @@ if (node.note){
         //si usuario confirma
         if ( ui.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite file with node's note?", 2, 2)==0) // does node have a note and defined extension?
         {
-            file.text = texto
+           // file.text = texto
+           file.setText(texto.toString(), 'UTF-8')
         } else {
             c.statusInfo = " Note's export aborted"
         }
