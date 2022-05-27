@@ -4,7 +4,7 @@ import NTF
 
 def file = node.link.file?:null
 if(file?.exists()){
-    if (NTF.extensionFromFilePath(node.link.uri.path) in NTF.acceptedFileExtensions){
+    if (NTF.extensionFromFilePath(node.link.uri.path) in NTF.acceptedFileExtensions || ui.showConfirmDialog(null, "\nFILE HAS NO ACCEPTED EXTENSION \n\nContinue anyway?\n ", "Attention!!", 2, 0)==0){
         if(!node.note || (node.note && ui.showConfirmDialog(null, "import text from: \n\n   ${file} ?", "Replace current node's note?", 2, 2)==0)){
             node.noteText = file.text
         } else {c.statusInfo = " note's import aborted"}
